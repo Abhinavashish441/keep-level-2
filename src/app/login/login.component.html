@@ -1,0 +1,16 @@
+<h1>
+  Log In User
+</h1>
+<form [formGroup]="loginForm" (ngSubmit)="userLogin(loginForm.value)" class="styled-form">
+    <input type="text" placeholder="enter Email ID" formControlName="user">
+    <br>
+    <span style="color: red;" *ngIf="user && user.invalid && user.touched">This input filed is not valid</span>
+     <br><br>
+    <input type="password" placeholder="enter password" formControlName="password"> 
+    <br>
+    <span style="color: red;" *ngIf="password && password.invalid && password.touched">This password filed is not valid</span>
+    <br>
+    <br>
+    <button>Login</button>
+  </form>
+  
